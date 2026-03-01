@@ -1,147 +1,171 @@
 ---
 import Map from '../components/map.astro'
+
+// SICRIE
+import sicriuBrad from '../../src/assets/sicrie/sicriu_brad.jpg?url'
+import sicriuBen10 from '../../src/assets/sicrie/sicriu_BEN10.jpg?url'
+import sicriuBen4 from '../../src/assets/sicrie/sicriu_BEN4.jpg?url'
+import sicriuBen11 from '../../src/assets/sicrie/sicriu_BEN11.jpg?url'
+import sicriuBen14 from '../../src/assets/sicrie/sicriu_BEN14.jpg?url'
+import sicriuBen7 from '../../src/assets/sicrie/sicriu_BEN7.jpg?url'
+import sicriuBen12 from '../../src/assets/sicrie/sicriu_BEN12.jpg?url'
+import sicriuBen2 from '../../src/assets/sicrie/sicriu_BEN2.jpg?url'
+
+// COROANE
+import coroana1 from '../../src/assets/coroane/Coroana-funerara-cu-flori-nr-4-mod-3.jpg?url'
+import coroana2 from '../../src/assets/coroane/Coroana-funerara-cu-flori-nr-4-mod-1.jpg?url'
+import coroana3 from '../../src/assets/coroane/Coroana-funerara-cu-flori-nr-2-mod-3.jpg?url'
+import coroana4 from '../../src/assets/coroane/Coroana-funerara-cu-flori-nr-3-mod-3.jpg?url'
+import coroana5 from '../../src/assets/coroane/Coroana-funerara-rotunda-cu-flori-1.jpg?url'
+import coroana6 from '../../src/assets/coroane/Coroana-funerara-rotunda-cu-flori-2.jpg?url'
+import coroana7 from '../../src/assets/coroane/Cruce-funerara-artificiala-cu-flori-mod-1.jpg?url'
+import coroana8 from '../../src/assets/coroane/Cruce-funerara-artificiala-cu-flori-mod-2.jpg?url'
 ---
 
+
 <section id="produse" class="py-20 bg-cream cursor-default-must">
-      <div class="text-center mb-16">
-      <p class="text-sage font-medium mb-3">Magazin</p>
-      <h3 class="font-serif text-4xl text-charcoal font-semibold mb-4">Gama larga de produse</h3>
-      <p class="text-gray-600 max-w-2xl mx-12 md:mx-auto">Produsele noastre va stau la dispozitie atunci cand aveti nevoie.</p>
-    </div>
+  <div class="text-center mb-16">
+    <p class="text-sage font-medium mb-3">Magazin</p>
+    <h3 class="font-serif text-4xl text-charcoal font-semibold mb-4">
+      Gama larga de produse
+    </h3>
+    <p class="text-gray-600 max-w-2xl mx-12 md:mx-auto">
+      Produsele noastre va stau la dispozitie atunci cand aveti nevoie.
+    </p>
+  </div>
+
   <div class="container mx-auto px-6 flex items-center justify-center gap-20 flex-col md:flex-row">
-<div class="card bg-base-100 max-w-xl w-full shadow-sm">
-  <figure>
-<div class="carousel w-full rounded-box">
-  <!-- Slide 1 -->
-  <div id="slide-sicrie-1" class="carousel-item w-full relative">
-    <div class="flex w-full gap-4 bg-white p-6 rounded-box">
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_brad.jpg" />
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN10.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-4">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-2">❯</button>
-    </div>
-  </div>
 
-  <!-- Slide 2 -->
-  <div id="slide-sicrie-2" class="carousel-item w-full relative">
-    <div class="flex w-full gap-4 bg-white p-4 rounded-box">
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN4.jpg" />
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN11.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-1">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-3">❯</button>
-    </div>
-  </div>
+    <!-- CARD SICRIE -->
+    <div class="card bg-base-100 max-w-xl w-full shadow-sm">
+      <figure>
+        <div class="carousel w-full rounded-box">
 
-  <!-- Slide 3 -->
-  <div id="slide-sicrie-3" class="carousel-item w-full relative">
-    <div class="flex w-full gap-4 bg-white p-4 rounded-box">
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN14.jpg" />
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN7.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-2">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-4">❯</button>
-    </div>
-  </div>
+          <div id="slide-sicrie-1" class="carousel-item w-full relative">
+            <div class="flex w-full gap-4 bg-white p-6 rounded-box">
+              <img class="w-1/2" src={sicriuBrad} />
+              <img class="w-1/2" src={sicriuBen10} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-4">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-2">❯</button>
+          </div>
+          </div>
 
-  <!-- Slide 4 -->
-  <div id="slide-sicrie-4" class="carousel-item w-full relative">
-    <div class="flex w-full gap-4 bg-white p-4 rounded-box">
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN12.jpg" />
-      <img class="w-1/2" src="../../src/assets/sicrie/sicriu_BEN2.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-3">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-1">❯</button>
-    </div>
-  </div>
-</div>
+          <div id="slide-sicrie-2" class="carousel-item w-full relative">
+            <div class="flex w-full gap-4 bg-white p-4 rounded-box">
+              <img class="w-1/2" src={sicriuBen4} />
+              <img class="w-1/2" src={sicriuBen11} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-1">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-3">❯</button>
+            </div>
+          </div>
 
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">
-      Sicrie si Accesorii
-      <div class="badge badge-secondary">NOUTATI</div>
-    </h2>
-    <p>Punem la dispoziție o gamă variată de sicrie si accesorii, realizate cu grijă și atenție la detalii, pentru a oferi un ultim omagiu demn celor dragi. </p>
-    <div class="card-actions justify-end">
-      <div class="badge badge-outline">Sicrie</div>
-      <div class="badge badge-outline">Accesorii</div>
-    </div>
-  </div>
-</div>
-<div class="card bg-base-100 max-w-xl w-full shadow-sm">
-  <figure>
-<div class="carousel w-full rounded-box">
-  <!-- Slide 1 -->
-  <div id="slide-coroane-1" class="carousel-item w-full relative">
-    <div class="flex w-full bg-white p-8 rounded-box">
-      <img class="w-1/2" src="../../src/assets/coroane/Coroana-funerara-cu-flori-nr-4-mod-3.jpg" />
-      <img class="w-1/2" src="../../src/assets/coroane/Coroana-funerara-cu-flori-nr-4-mod-1.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-4">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-2">❯</button>
-    </div>
-  </div>
+          <div id="slide-sicrie-3" class="carousel-item w-full relative">
+            <div class="flex w-full gap-4 bg-white p-4 rounded-box">
+              <img class="w-1/2" src={sicriuBen14} />
+              <img class="w-1/2" src={sicriuBen7} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-2">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-4">❯</button>
+            </div>
+          </div>
 
-  <!-- Slide 2 -->
-  <div id="slide-coroane-2" class="carousel-item w-full relative">
-    <div class="flex w-full bg-white p-8 rounded-box">
-      <img class="w-1/2" src="../../src/assets/coroane/Coroana-funerara-cu-flori-nr-2-mod-3.jpg" />
-      <img class="w-1/2" src="../../src/assets/coroane/Coroana-funerara-cu-flori-nr-3-mod-3.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-1">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-3">❯</button>
-    </div>
-  </div>
+          <div id="slide-sicrie-4" class="carousel-item w-full relative">
+            <div class="flex w-full gap-4 bg-white p-4 rounded-box">
+              <img class="w-1/2" src={sicriuBen12} />
+              <img class="w-1/2" src={sicriuBen2} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-3">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-sicrie-1">❯</button>
+            </div>
+          </div>
 
-  <!-- Slide 3 -->
-  <div id="slide-coroane-3" class="carousel-item w-full relative">
-    <div class="flex w-full bg-white p-8 rounded-box">
-      <img class="w-1/2" src="../../src/assets/coroane/Coroana-funerara-rotunda-cu-flori-1.jpg" />
-      <img class="w-1/2" src="../../src/assets/coroane/Coroana-funerara-rotunda-cu-flori-2.jpg" />
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-2">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-4">❯</button>
-    </div>
-  </div>
+        </div>
+      </figure>
 
-  <!-- Slide 4 -->
-  <div id="slide-coroane-4" class="carousel-item w-full relative">
-    <div class="flex w-full bg-white p-8 rounded-box">
-      <img class="w-1/2" src="../../src/assets/coroane/Cruce-funerara-artificiala-cu-flori-mod-1.jpg" />
-      <img class="w-1/2" src="../../src/assets/coroane/Cruce-funerara-artificiala-cu-flori-mod-2.jpg" />
+      <div class="card-body">
+        <h2 class="card-title">
+          Sicrie si Accesorii
+          <div class="badge badge-secondary">NOUTATI</div>
+        </h2>
+        <p>
+          Punem la dispoziție o gamă variată de sicrie si accesorii,
+          realizate cu grijă și atenție la detalii.
+        </p>
+      </div>
     </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-3">❮</button>
-      <button class="carousel-btn btn btn-circle" data-target="slide-coroane-1">❯</button>
-    </div>
-  </div>
-</div>
 
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">
-      Jebre si coroane
-      <div class="badge badge-secondary">NOUTATI</div>
-    </h2>
-    <p>Odata cu pierderea celui drag se obisnuieste sa se aduca un ultim omagiu reprezentat de o coroana de flori sau o jerba.</p>
-    <div class="card-actions justify-end">
-      <div class="badge badge-outline">Jebre</div>
-      <div class="badge badge-outline">Coroane</div>
+    <!-- CARD COROANE -->
+    <div class="card bg-base-100 max-w-xl w-full shadow-sm">
+      <figure>
+        <div class="carousel w-full rounded-box">
+
+          <div id="slide-coroane-1" class="carousel-item w-full relative">
+            <div class="flex w-full bg-white p-8 rounded-box">
+              <img class="w-1/2" src={coroana1} />
+              <img class="w-1/2" src={coroana2} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-4">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-2">❯</button>
+          </div>
+          </div>
+
+          <div id="slide-coroane-2" class="carousel-item w-full relative">
+            <div class="flex w-full bg-white p-8 rounded-box">
+              <img class="w-1/2" src={coroana3} />
+              <img class="w-1/2" src={coroana4} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-1">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-3">❯</button>
+          </div>
+          </div>
+
+          <div id="slide-coroane-3" class="carousel-item w-full relative">
+            <div class="flex w-full bg-white p-8 rounded-box">
+              <img class="w-1/2" src={coroana5} />
+              <img class="w-1/2" src={coroana6} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-2">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-4">❯</button>
+          </div>
+          </div>
+
+          <div id="slide-coroane-4" class="carousel-item w-full relative">
+            <div class="flex w-full bg-white p-8 rounded-box">
+              <img class="w-1/2" src={coroana7} />
+              <img class="w-1/2" src={coroana8} />
+            </div>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-3">❮</button>
+              <button class="carousel-btn btn btn-circle" data-target="slide-coroane-1">❯</button>
+            </div>
+          </div>
+
+        </div>
+      </figure>
+
+      <div class="card-body">
+        <h2 class="card-title">
+          Jerbe si coroane
+          <div class="badge badge-secondary">NOUTATI</div>
+        </h2>
+        <p>
+          Odata cu pierderea celui drag se obisnuieste sa se aduca
+          un ultim omagiu reprezentat de o coroana de flori sau o jerba.
+        </p>
+      </div>
     </div>
-  </div>
-</div>
+
   </div>
 </section>
-
 
 <script>
   document.querySelectorAll('.carousel-btn').forEach(btn => {

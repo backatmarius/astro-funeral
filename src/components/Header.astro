@@ -1,3 +1,7 @@
+---
+import logo from '../assets/ben-logo.svg?url';
+---
+
 <header id="header" class="bg-base-100 shadow-sm fixed w-full top-0 z-50 section-clickable">
 <div class="navbar mx-auto px-6 lg:py-4">
   <div class="navbar-start">
@@ -9,7 +13,7 @@
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <a href="tel:+40(0)723321499" class="btn lg:hidden">Contacteaza-ne</a>
-        <li><a href="/"> Acasa </a></li>
+        <li><a href="/astro-funeral"> Acasa </a></li>
         <li><a href="#servicii">Servicii</a></li>
         <li><a href="#despre-noi">Despre Noi</a></li>
         <li><a href="#produse">Magazin</a></li>
@@ -17,12 +21,12 @@
       </ul>
     </div>
     <a href="/" class="hidden lg:block">
-      <img src="../src/assets/ben-logo.svg" alt="Menu" class="w-48"/>
+      <img src={logo} alt="Menu" class="w-48"/>
     </a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-lg menu-horizontal px-1">
-      <li><a href="/"> Acasa </a></li>
+      <li><a href="/astro-funeral"> Acasa </a></li>
       <!-- <li><a href="/despre-noi"> Despre noi </a></li> -->
       <li><a href="#servicii">Servicii</a></li>
       <li><a href="#despre-noi">Despre Noi</a></li>
@@ -41,7 +45,7 @@
   </div>
   <div class="navbar-end">
     <div class="items-center gap-2 mr-6 hidden lg:inline-flex">
-      <a href="/">
+      <a href="/astro-funeral">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]">
         <path
           stroke-linecap="round"
@@ -54,7 +58,7 @@
     </div>
     <a href="tel:+40(0)723321499" class="btn hidden lg:flex bg-white hover:border-amber-400 border-2">Contacteaza-ne</a>
     <a href="/">
-      <img src="../src/assets/ben-logo.svg" alt="Menu" class="h-20 w-40 self-center items-center lg:hidden" />
+      <img src={logo} alt="Menu" class="h-20 w-40 self-center items-center lg:hidden" />
     </a>
   </div>
 </div>

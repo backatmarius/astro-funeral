@@ -5,9 +5,12 @@ export interface Props {
 }
 
 const { heading ='Funerare Heading', text = 'Funerare Text' } = Astro.props as Props
+
+import magazin1 from "../assets/magazin/magazin_1.jpeg?url"
+
 ---
 
-<section id="hero-section" class="pt-173 lg:pt-24 h-[680px] flex items-center cursor-default-must">
+<section id="hero-section" class="pt-120 lg:pt-24 h-[680px] flex items-center cursor-default-must">
     <div class="container hero mx-auto px-6">
         <div class="flex flex-col lg:flex-row items-center gap-12">
             <div class="lg:w-1/2 space-y-6">
@@ -59,7 +62,7 @@ const { heading ='Funerare Heading', text = 'Funerare Text' } = Astro.props as P
                     <div class="absolute inset-0 bg-sage opacity-10 rounded-3xl transform rotate-3"></div>
                     <div class="relative bg-white p-2 rounded-3xl shadow-2xl">
                         <div class="absolute inset-0 bg-amber-900 opacity-10 rounded-3xl transform rotate-3"></div>
-                            <img class="w-full h-[480px] object-cover rounded-2xl" src="../src/assets/magazin/magazin_1.jpeg" alt="peaceful serene chapel interior with soft natural light, wooden pews, white flowers, calming atmosphere, professional photography">
+                            <img class="w-full object-cover rounded-2xl" src={magazin1} alt="peaceful serene chapel interior with soft natural light, wooden pews, white flowers, calming atmosphere, professional photography">
                         </div>
                 </div>
             </div>
