@@ -1,0 +1,56 @@
+---
+import Map from '../components/map.astro'
+---
+
+<section id="locatii" class="pt-20 pb-4 bg-white cursor-default-must">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-sage font-medium mb-3">Locatiile Noastre</p>
+      <h3 class="font-serif text-4xl text-charcoal font-semibold mb-4">Suntem aici pentru a te ajuta</h3>
+      <p class="text-gray-600 max-w-2xl mx-auto">Contactați-ne oricând, zi sau noapte. Echipa noastră plină de compasiune este gata să vă ajute cu nevoile imediate sau să răspundă la întrebări despre planificarea din timp.</p>
+    </div>
+
+    <section id="servicii" class="bg-white cursor-default-must">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row bg-stone-50 rounded-xl p-6 gap-6">
+
+          <!-- Left Column - Text -->
+          <div class="w-full md:w-1/2 flex items-center justify-center">
+            <div class="flex flex-col gap-6 w-full md:w-auto">
+
+              <h2 class="font-serif text-2xl text-charcoal font-semibold">Locatie Pancesti</h2>
+
+              <div>
+                <h5 class="text-base font-semibold uppercase tracking-widest text-stone-400 mb-2">Program</h5>
+                <p class="text-base font-bold text-stone-800">24h - Non Stop</p>
+              </div>
+
+              <div>
+                <h5 class="text-base font-semibold uppercase tracking-widest text-stone-400 mb-2">Adresă</h5>
+                <a href="https://www.google.com/maps/place/La+Ben+Sorin+Servicii+Funerare/@46.2103379,27.0625855,18.94z/data=!4m15!1m8!3m7!1s0x40b5afe5f9d2b157:0x4e04b7d2e8a05de1!2zNjA3NTIzIFDDom5jZciZdGksIFJvbWFuaWE!3b1!8m2!3d46.2103143!4d27.0607693!16s%2Fg%2F1q6jzlvhl!3m5!1s0x40b5af0029ed7b83:0x545ae961d49f909!8m2!3d46.2102245!4d27.0623167!16s%2Fg%2F11w_zn02rq?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-stone-700 hover:text-stone-900 underline underline-offset-4 decoration-black hover:decoration-stone-600 transition-colors">Strada Protopop Ioan Negoita, Nr. 215,<br/>sat Pancesti, comuna Sascut, judetul Bacau<br/>Romania, 607523</a>
+              </div>
+
+              <div>
+                <h5 class="text-base font-semibold uppercase tracking-widest text-stone-400 mb-2">Telefon</h5>
+                <ul class="space-y-1">
+                  <li><a href="tel:+40723321499" class="text-base font-bold text-stone-700 hover:text-stone-900 underline underline-offset-2 decoration-stone-300 hover:decoration-stone-600 transition-colors">+40 (0)723 321 499</a></li>
+                  <li><a href="tel:+40334131451" class="text-base font-bold text-stone-700 hover:text-stone-900 underline underline-offset-2 decoration-stone-300 hover:decoration-stone-600 transition-colors">+40 (0)334 131 451</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column - Map -->
+          <div class="flex flex-col space-y-4 w-full md:w-1/2">
+            <div class="w-full z-0 relative">
+              <Map loc={[46.21027357549614, 27.062326837769646]} zoom={12} />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>

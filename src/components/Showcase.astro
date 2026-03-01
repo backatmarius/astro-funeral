@@ -1,0 +1,75 @@
+---
+export interface Props {
+    heading?: string;
+    text?: string;
+}
+
+const { heading ='Funerare Heading', text = 'Funerare Text' } = Astro.props as Props
+---
+
+<section id="hero-section" class="pt-173 lg:pt-24 h-[680px] flex items-center cursor-default-must">
+    <div class="container hero mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 space-y-6">
+                <div class="inline-block bg-amber-200 bg-opacity-10 px-4 py-2 rounded-full">
+                    <p class="text-sage text-sm font-medium" contenteditable="false">Disponibili 24/7 pentru familia dumneavoastra</p>
+                </div>
+                <h2 class="font-serif text-5xl lg:text-5xl text-charcoal leading-tight font-semibold" contenteditable="false">
+                        Respect și compasiune pentru fiecare viață
+                    </h2>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-xl" contenteditable="false">
+                       Înțelegem că aceasta este o perioadă dificilă.
+                       Echipa noastră dedicată este alături de dumneavoastră la fiecare pas, cu discreție și servicii adaptate nevoilor dumneavoastră..
+                    </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="tel:+40(0)723321499" class="flex items-center justify-center space-x-3 bg-base-200 px-8 py-4 rounded-lg hover:bg-base-100 transition shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-2.25a1.5 1.5 0 0 0-1.086-1.44l-3.375-1.012a1.5 1.5 0 0 0-1.689.633l-.712 1.068a12.03 12.03 0 0 1-5.318-5.318l1.068-.712a1.5 1.5 0 0 0 .633-1.689L8.44 4.086A1.5 1.5 0 0 0 7 3H4.75A2.25 2.25 0 0 0 2.25 5.25v1.5Z"
+        />
+      </svg>
+      <div class="text-left">
+                                <p class="text-xs opacity-80" contenteditable="false">Sunati acum - 24/7</p>
+                                <p class="font-semibold text-lg" contenteditable="false">+40 (0)723 321 499</p>
+                            </div>
+                        </a>
+<!--                     <a href="#contact" class="flex items-center justify-center space-x-2 border-2 border-sage text-sage px-8 py-4 rounded-lg hover:bg-sage hover:text-white transition">
+                            <span class="font-medium" contenteditable="false">Stabilește o întâlnire</span>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="2.5"
+  stroke="currentColor"
+  class="size-[1.2em]"
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M13.5 4.5L21 12m0 0-7.5 7.5M21 12H3"
+  />
+</svg>
+                        </a> -->
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-sage opacity-10 rounded-3xl transform rotate-3"></div>
+                    <div class="relative bg-white p-2 rounded-3xl shadow-2xl">
+                        <div class="absolute inset-0 bg-amber-900 opacity-10 rounded-3xl transform rotate-3"></div>
+                            <img class="w-full h-[480px] object-cover rounded-2xl" src="../src/assets/magazin/magazin_1.jpeg" alt="peaceful serene chapel interior with soft natural light, wooden pews, white flowers, calming atmosphere, professional photography">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--             <h1> {heading} </h1>
+            <p> {text} </p>
+            <img
+            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+            class="max-w-sm rounded-lg shadow-2xl"
+            /> -->
+</section>

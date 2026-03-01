@@ -1,0 +1,64 @@
+---
+import Map from '../components/map.astro'
+---
+
+<section id="servicii" class="bg-white cursor-default-must">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row bg-stone-50 rounded-xl p-6 gap-6">
+
+      <!-- Left Column - Title + Map -->
+      <div class="flex flex-col space-y-4 w-full md:w-1/2">
+        <div class="w-full z-0 relative">
+          <Map loc={[46.193435, 27.074582]} zoom={13} />
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="w-full md:w-1/2 flex items-center justify-center">
+        <div class="flex flex-col gap-6 w-full md:w-auto">
+                  <h2 class="font-serif text-2xl text-charcoal font-semibold self-center">Locatie Sascut Sat</h2>
+
+          <!-- Opening Hours -->
+          <div>
+            <h5 class="text-base font-semibold uppercase tracking-widest text-stone-400 mb-2">Program</h5>
+            <p class="text-base font-bold text-stone-800">24h - Non Stop</p>
+          </div>
+
+          <!-- Address -->
+<div>
+  <h5 class="text-base font-semibold uppercase tracking-widest text-stone-400 mb-2">Adresă</h5>
+<a
+    href="https://www.google.com/maps/place/DJ119A+930,+607524+Sascut-Sat,+Romania/@46.1933456,27.0771335,20z/data=!4m6!3m5!1s0x40b5b03b11a2d753:0x2fbdb1e7e20e80ee!8m2!3d46.1933503!4d27.0773543!16s%2Fg%2F11hzb31wlz?authuser=1&entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-base font-bold text-stone-700 hover:text-stone-900 underline underline-offset-4 decoration-black hover:decoration-stone-600 transition-colors"
+  >
+     DJ119A 930, 607524,<br/>
+    sat Pancesti, comuna Sascut, judetul Bacau<br/>
+    Romania, 607524
+  </a>
+</div>
+
+          <!-- Phone -->
+          <div>
+            <h5 class="text-base font-semibold uppercase tracking-widest text-stone-400 mb-2">Telefon</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="tel:+40723321499" class="text-base font-bold text-stone-700 hover:text-stone-900 underline underline-offset-2 decoration-stone-300 hover:decoration-stone-600 transition-colors">
+                  +40 (0)723 321 499
+                </a>
+              </li>
+              <li>
+                <a href="tel:+40334131451" class="text-base font-bold text-stone-700 hover:text-stone-900 underline underline-offset-2 decoration-stone-300 hover:decoration-stone-600 transition-colors">
+                  +40 (0)334 131 451
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

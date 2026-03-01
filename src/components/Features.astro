@@ -1,0 +1,77 @@
+---
+import Card from './Card.astro';
+import Coroane from '../assets/coroane.svg'
+import Pachete from '../assets/pachete.svg'
+import Imbalsamare from '../assets/imbalsamare.svg';
+import Incinerare from '../assets/incinerare.svg';
+import Morminte from '../assets/morminte.svg';
+import Parastase from '../assets/parastase.svg';
+import Repatriere from '../assets/repatriere.svg';
+import Sicrie from '../assets/sicrie.svg';
+import Transport from '../assets/transport.svg'
+
+
+const featuresData = [
+  {
+    title: 'Pachete de inhumare',
+    body: 'Oferim pachete complete de înhumare, adaptate nevoilor și bugetului fiecărei familii, cu tot respectul cuvenit.',
+    Icon: Pachete
+  },
+  {
+    title: 'Sicrie si accesorii',
+    body: 'Gamă variată de sicrie și accesorii funerare, de la modele simple la cele premium, pentru un ultim omagiu demn.',
+    Icon: Sicrie
+  },
+  {
+    title: 'Imbalsamare',
+    body: 'Servicii profesionale de îmbălsămare pentru păstrarea aspectului natural al celui drag, oferind familiei un rămas-bun liniștit.',
+    Icon: Imbalsamare
+  },
+  {
+    title: 'Jerbe si coroane',
+    body: 'Aranjamente florale funerare realizate cu grijă și sensibilitate, pentru a onora memoria celui plecat dintre noi.',
+    Icon: Coroane
+  },
+  {
+    title: 'Transport funerar',
+    body: 'Asigurăm transport funerar sigur și discret, la orice oră, atât în localitate cât și în afara acesteia.',
+    Icon: Transport
+  },
+  {
+    title: 'Parastase si Pomeni',
+    body: 'Organizăm parastase și pomeni conform tradițiilor ortodoxe, cu tot ce este necesar pentru cinstirea memoriei celui drag.',
+    Icon: Parastase
+  },
+  {
+    title: 'Incinerare',
+    body: 'Servicii de incinerare desfășurate cu demnitate și respect, însoțite de sprijin complet pentru familia îndoliată.',
+    Icon: Incinerare
+  },
+  {
+    title: 'Locuri de veci',
+    body: 'Vă ajutăm să identificați și să achiziționați locuri de veci în cimitirele din zonă, pentru un loc de odihnă veșnică.',
+    Icon: Morminte
+  },
+  {
+    title: 'Repatriere',
+    body: 'Gestionăm toate formalitățile necesare pentru repatrierea persoanelor decedate din străinătate, rapid și fără birocrație.',
+    Icon: Repatriere
+  }
+];
+---
+
+
+<section id="servicii" class="pt-152 pb-20 md:py-20 bg-cream cursor-default-must">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p id="servicii" class="text-sage font-medium mb-3">Serviciile noastre</p>
+      <h3 class="font-serif text-4xl text-charcoal font-semibold mb-4">Servicii funerare complete</h3>
+      <p class="text-gray-600 max-w-2xl mx-auto">Oferim o gamă completă de servicii pentru a onora persoana iubită adecvat.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {featuresData.map(feature => (
+          <Card Icon={feature.Icon} title={feature.title} body={feature.body}/>
+        ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+---
+export interface Props {
+  text?: string;
+  loc: [number, number];
+  zoom: number;
+}
+
+const { text, loc, zoom } = Astro.props;
+const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css' integrity='sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=' crossorigin='' />
+
+<map-inner
+  data-text={text}
+  data-lat={loc[0]}
+  data-lng={loc[1]}
+  data-zoom={zoom}
+  data-map-id={mapId}
+></map-inner>
+
+<div id={mapId} class='mb-3 h-96'></div>
+
+<script>
+  import L from 'leaflet';
+
+  class MapInner extends HTMLElement {
+    constructor() {
+      super();
+
+      // Get required values with null checks
+      const mapId = this.dataset.mapId;
+      const lat = this.dataset.lat;
+      const lng = this.dataset.lng;
+      const zoom = this.dataset.zoom;
+
+      // Validate required data attributes
+      if (!mapId || !lat || !lng || !zoom) {
+        console.error('Missing required data attributes for map');
+        return;
+      }
+
+      // Create tuple explicitly
+      const loc: [number, number] = [Number(lat), Number(lng)];
+
+      // Remove any existing map with this ID
+      const existingMap = L.DomUtil.get(mapId);
+
+      // TypeScript-safe check for Leaflet map existence
+      if (existingMap && (existingMap as any)._leaflet_id) {
+        (existingMap as any)._leaflet_id = null;
+        existingMap.remove();
+      }
+
+      const map = L.map(mapId, {
+        scrollWheelZoom: false
+      }).setView(loc, Number(zoom));
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      const marker = L.marker(loc).addTo(map);
+
+      if (this.dataset.text) {
+        marker.bindPopup(this.dataset.text).openPopup();
+      }
+    }
+  }
+
+  customElements.define('map-inner', MapInner);
+</script>
