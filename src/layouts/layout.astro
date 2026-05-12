@@ -16,8 +16,8 @@ export interface Props {
 }
 
 const {
-  title = 'Pompe Funebre Sascut | Servicii Funerare 24/7 – Bacău',
-  description = 'Servicii funerare complete în Sascut și Pancești, județul Bacău. Disponibili 24/7. Pachete de înhumare, sicrie, transport funerar, repatriere și mai mult.'
+  title = 'Pompe Funebre Bacău | Servicii Funerare 24/7 – Sascut, Onești, Adjud',
+  description = 'Pompe funebre disponibile 24/7 în Bacău, Sascut, Pancești, Onești, Adjud și Focșani. Servicii complete: înhumare, sicrie, transport funerar, repatriere. Sunați acum: +40 723 321 499.'
 } = Astro.props as Props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -48,6 +48,14 @@ const jsonLd = {
   "hasMap": "https://www.google.com/maps/place/La+Ben+Sorin+Servicii+Funerare",
   "sameAs": [
     "https://www.google.com/maps/place/La+Ben+Sorin+Servicii+Funerare"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Bacău", "sameAs": "https://www.wikidata.org/wiki/Q193668" },
+    { "@type": "City", "name": "Sascut", "sameAs": "https://www.wikidata.org/wiki/Q1012636" },
+    { "@type": "City", "name": "Pancești" },
+    { "@type": "City", "name": "Onești", "sameAs": "https://www.wikidata.org/wiki/Q203206" },
+    { "@type": "City", "name": "Adjud", "sameAs": "https://www.wikidata.org/wiki/Q648334" },
+    { "@type": "City", "name": "Focșani", "sameAs": "https://www.wikidata.org/wiki/Q200018" }
   ],
   "location": [
     {
