@@ -1,0 +1,93 @@
+---
+const faqs = [
+  {
+    question: "Cât costă o înmormântare în județul Bacău?",
+    answer: "Costul variază în funcție de serviciile alese. Oferim pachete complete de înhumare adaptate oricărui buget, cu prețuri transparente și fără costuri ascunse. Contactați-ne 24/7 la +40 723 321 499 pentru un deviz personalizat."
+  },
+  {
+    question: "Oferiți servicii funerare non-stop în Sascut, Pancești și Bacău?",
+    answer: "Da, suntem disponibili 24 de ore din 24, 7 zile din 7, inclusiv în weekenduri și sărbători legale. Echipa noastră intervine rapid în Sascut, Pancești, Bacău, Onești, Adjud și Focșani."
+  },
+  {
+    question: "Ce acte sunt necesare pentru înmormântare?",
+    answer: "Sunt necesare: certificatul de deces emis de medic, actul de identitate al decedatului și al celui care organizează înmormântarea. Ne ocupăm de toate formalitățile birocratice în locul dumneavoastră."
+  },
+  {
+    question: "Oferiți servicii de repatriere a decedaților din străinătate?",
+    answer: "Da, gestionăm integral repatrierea persoanelor decedate din orice țară, inclusiv actele consulare, transportul internațional și toate formalitățile necesare la întoarcerea în România."
+  },
+  {
+    question: "Organizați parastase și pomeni conform tradiției ortodoxe?",
+    answer: "Da, organizăm parastase la 3 zile, 7 zile, 40 de zile, 6 luni și 1 an, conform tradițiilor ortodoxe românești. Ne ocupăm de toate cele necesare: colivă, lumânări, pachete și masa de pomenire."
+  },
+  {
+    question: "Deserviți și localitățile din zona Adjud și Focșani?",
+    answer: "Da, asigurăm servicii funerare complete și transport funerar în Adjud, Focșani și localitățile din județul Vrancea, în completarea zonei județului Bacău."
+  }
+];
+---
+
+<section id="intrebari-frecvente" class="py-20 bg-white cursor-default-must">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-sage font-medium mb-3">Întrebări frecvente</p>
+      <h2 class="font-serif text-4xl text-charcoal font-semibold mb-4">Răspunsuri la întrebările dumneavoastră</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Suntem alături de dumneavoastră cu informații clare și transparente în momentele dificile.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto divide-y divide-gray-200">
+      {faqs.map((faq) => (
+        <details class="group py-5">
+          <summary class="flex justify-between items-center cursor-pointer list-none gap-4">
+            <span class="font-semibold text-charcoal text-lg">{faq.question}</span>
+            <span class="text-sage shrink-0 transition-transform group-open:rotate-45">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/ld+json">{
+  JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât costă o înmormântare în județul Bacău?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Costul variază în funcție de serviciile alese. Oferim pachete complete de înhumare adaptate oricărui buget, cu prețuri transparente și fără costuri ascunse. Contactați-ne 24/7 la +40 723 321 499 pentru un deviz personalizat." }
+      },
+      {
+        "@type": "Question",
+        "name": "Oferiți servicii funerare non-stop în Sascut, Pancești și Bacău?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da, suntem disponibili 24 de ore din 24, 7 zile din 7, inclusiv în weekenduri și sărbători legale. Echipa noastră intervine rapid în Sascut, Pancești, Bacău, Onești, Adjud și Focșani." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce acte sunt necesare pentru înmormântare?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sunt necesare: certificatul de deces emis de medic, actul de identitate al decedatului și al celui care organizează înmormântarea. Ne ocupăm de toate formalitățile birocratice în locul dumneavoastră." }
+      },
+      {
+        "@type": "Question",
+        "name": "Oferiți servicii de repatriere a decedaților din străinătate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da, gestionăm integral repatrierea persoanelor decedate din orice țară, inclusiv actele consulare, transportul internațional și toate formalitățile necesare la întoarcerea în România." }
+      },
+      {
+        "@type": "Question",
+        "name": "Organizați parastase și pomeni conform tradiției ortodoxe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da, organizăm parastase la 3 zile, 7 zile, 40 de zile, 6 luni și 1 an, conform tradițiilor ortodoxe românești. Ne ocupăm de toate cele necesare: colivă, lumânări, pachete și masa de pomenire." }
+      },
+      {
+        "@type": "Question",
+        "name": "Deserviți și localitățile din zona Adjud și Focșani?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da, asigurăm servicii funerare complete și transport funerar în Adjud, Focșani și localitățile din județul Vrancea, în completarea zonei județului Bacău." }
+      }
+    ]
+  })
+}</script>
