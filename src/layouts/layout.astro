@@ -12,8 +12,80 @@ import '../styles/global.css'
 
 export interface Props {
     title?: string;
+    description?: string;
 }
-const { title = 'Funerare Sascut' } = Astro.props as Props;
+
+const {
+  title = 'Pompe Funebre Sascut | Servicii Funerare 24/7 – Bacău',
+  description = 'Servicii funerare complete în Sascut și Pancești, județul Bacău. Disponibili 24/7. Pachete de înhumare, sicrie, transport funerar, repatriere și mai mult.'
+} = Astro.props as Props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og-image.jpg', Astro.site);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FuneralHome",
+  "name": "La Ben Sorin – Servicii Funerare",
+  "url": "https://funeraresascut.ro",
+  "telephone": ["+40723321499", "+40334131451"],
+  "description": description,
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Protopop Ioan Negoita, Nr. 215",
+    "addressLocality": "Pancești",
+    "addressRegion": "Bacău",
+    "postalCode": "607523",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.2102245,
+    "longitude": 27.0623167
+  },
+  "hasMap": "https://www.google.com/maps/place/La+Ben+Sorin+Servicii+Funerare",
+  "sameAs": [
+    "https://www.google.com/maps/place/La+Ben+Sorin+Servicii+Funerare"
+  ],
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Locație Pancești",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strada Protopop Ioan Negoita, Nr. 215",
+        "addressLocality": "Pancești",
+        "addressRegion": "Bacău",
+        "postalCode": "607523",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.2102245,
+        "longitude": 27.0623167
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Locație Sascut Sat",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "DJ119A 930",
+        "addressLocality": "Sascut Sat",
+        "addressRegion": "Bacău",
+        "postalCode": "607524",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.1933503,
+        "longitude": 27.0773543
+      }
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
@@ -22,10 +94,32 @@ const { title = 'Funerare Sascut' } = Astro.props as Props;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:site_name" content="La Ben Sorin – Servicii Funerare" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD Structured Data -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>{title}</title>
   </head>
   <body class="font-sans bg-base-100 text-charcoal">
     <Header />
